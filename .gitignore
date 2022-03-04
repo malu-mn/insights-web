@@ -1,0 +1,3 @@
+source/insights-web-app/.browserslistrc
+.vs/*
+source/insights-web-app/package-lock.json
