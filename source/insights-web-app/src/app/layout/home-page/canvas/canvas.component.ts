@@ -58,7 +58,7 @@ export class CanvasComponent implements OnInit {
           var p2 = points[j]
           if (!(p1 == p2)) {
             var placed = false;
-            for (var k = 0; k < 5; k++) {
+            for (var k = 0; k < 7; k++) {
               if (!placed) {
                 if (closest[k] == undefined) {
                   closest[k] = p2;
@@ -67,7 +67,7 @@ export class CanvasComponent implements OnInit {
               }
             }
 
-            for (var k = 0; k < 5; k++) {
+            for (var k = 0; k < 7; k++) {
               if (!placed) {
                 if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
                   closest[k] = p2;
@@ -82,7 +82,7 @@ export class CanvasComponent implements OnInit {
 
       // assign a circle to each point
       for (const i in points) {
-        var c = new Circle(points[i], 2 + Math.random() * 2, 'rgba(255,255,255,0.3)');
+        var c = new Circle(points[i], 5 + Math.random() * 5, 'rgba(255,255,255,0.3)');
         points[i].circle = c;
       }
     }
@@ -136,13 +136,13 @@ export class CanvasComponent implements OnInit {
         ctx.clearRect(0, 0, width, height);
         for (var i in points) {
           // detect points in range
-          if (Math.abs(getDistance(target, points[i])) < 4000) {
+          if (Math.abs(getDistance(target, points[i])) < 8000) {
             points[i].active = 0.3;
             points[i].circle.active = 0.6;
-          } else if (Math.abs(getDistance(target, points[i])) < 20000) {
+          } else if (Math.abs(getDistance(target, points[i])) < 40000) {
             points[i].active = 0.1;
             points[i].circle.active = 0.3;
-          } else if (Math.abs(getDistance(target, points[i])) < 40000) {
+          } else if (Math.abs(getDistance(target, points[i])) < 80000) {
             points[i].active = 0.02;
             points[i].circle.active = 0.1;
           } else {
