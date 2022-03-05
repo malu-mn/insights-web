@@ -20,7 +20,6 @@ export class NavBarComponent implements OnInit {
     this._router.events.subscribe(change => {
       
       var currentUrl = change['url'];
-      console.log('url' + currentUrl)
 
       // Don't show logo for home route ('')
       if(currentUrl) {

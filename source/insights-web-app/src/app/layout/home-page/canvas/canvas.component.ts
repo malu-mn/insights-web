@@ -1,13 +1,35 @@
 import { Component, OnInit } from '@angular/core';
+import {
+  trigger, state, style, animate, transition,
+} from '@angular/animations';
 import { TweenLite } from 'gsap';
 
 
 @Component({
   selector: 'app-canvas',
   templateUrl: './canvas.component.html',
-  styleUrls: ['./canvas.component.css']
+  styleUrls: ['./canvas.component.css'],
+  animations: [
+    trigger('showHide', [
+      state('show', style({
+        opacity: 1,
+      })),
+      state('hide', style({
+        opacity: 0,
+      })),
+      transition('show => hide', [
+        animate('2s')
+      ]),
+      transition('hide => show', [
+        animate('0.5s')
+      ]),
+    ])
+  ]
 })
 export class CanvasComponent implements OnInit {
+
+  // for the fade in animation
+  public logoState = 'hide';
 
   constructor() { }
 
@@ -17,6 +39,7 @@ export class CanvasComponent implements OnInit {
     }, 500);
 
   }
+
   private animate() {
     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
@@ -24,6 +47,9 @@ export class CanvasComponent implements OnInit {
     initHeader();
     initAnimation();
     addListeners();
+    
+    this.logoState = 'show';
+    console.log('current state ' + this.logoState);
 
     function initHeader() {
 
