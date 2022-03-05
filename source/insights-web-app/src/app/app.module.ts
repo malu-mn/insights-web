@@ -15,6 +15,7 @@ import { AboutUsComponent } from './layout/about-us/about-us.component';
 
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomePageComponent } from './layout/home-page/home-page.component';
+import { CanvasComponent } from './layout/home-page/canvas/canvas.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,8 @@ import { HomePageComponent } from './layout/home-page/home-page.component';
     AboutUsComponent,
 
     FooterComponent,
+
+    CanvasComponent,
   ],
   imports: [
     BrowserModule,
