@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { NavBarComponent } from './layout/home-page/nav-bar/nav-bar.component';
+import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
 
 
 import { ServicesPageComponent } from './layout/services-page/services-page.component';
@@ -16,6 +16,7 @@ import { AboutUsComponent } from './layout/about-us/about-us.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomePageComponent } from './layout/home-page/home-page.component';
 import { CanvasComponent } from './layout/home-page/canvas/canvas.component';
+import { MainPageComponent } from './layout/main-page/main-page.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,8 @@ import { CanvasComponent } from './layout/home-page/canvas/canvas.component';
     AboutUsComponent,
 
     FooterComponent,
+
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,

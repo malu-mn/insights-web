@@ -17,7 +17,7 @@ export class HomePageComponent implements OnInit {
   }
 
   public navigate(): void {
-    this._rourer.navigate([AppRoutesStrings.about]);
+    this._rourer.navigate([AppRoutesStrings.main]);
   }
 
 }

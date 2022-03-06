@@ -1,8 +1,11 @@
+
 import { AppRoutesStrings } from './layout/utilities/app-constants';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomePageComponent } from './layout/home-page/home-page.component';
+import { MainPageComponent } from './layout/main-page/main-page.component';
+
 import { AboutUsComponent } from './layout/about-us/about-us.component';
 import { ServicesPageComponent } from './layout/services-page/services-page.component';
 import { CustomersComponent } from './layout/customers/customers.component';
@@ -15,24 +18,36 @@ const routes: Routes = [
     data: { showLogo: false }
   },
   {
-    path: AppRoutesStrings.about,
-    component: AboutUsComponent,
-    data: { showLogo: true }
-  },
-  {
-    path: AppRoutesStrings.services,
-    component: ServicesPageComponent,
-    data: { showLogo: true }
-  },
-  {
-    path: AppRoutesStrings.customers,
-    component: CustomersComponent,
-    data: { showLogo: true }
-  },
-  {
-    path: AppRoutesStrings.contact,
-    component: ContactsComponent,
-    data: { showLogo: true }
+    path: AppRoutesStrings.main,
+    component: MainPageComponent,
+    data: { showLogo: false },
+    children: [
+      {
+        path: '',
+        component: AboutUsComponent,
+        data: { showLogo: true }
+      },
+      {
+        path: AppRoutesStrings.about,
+        component: AboutUsComponent,
+        data: { showLogo: true }
+      },
+      {
+        path: AppRoutesStrings.services,
+        component: ServicesPageComponent,
+        data: { showLogo: true }
+      },
+      {
+        path: AppRoutesStrings.customers,
+        component: CustomersComponent,
+        data: { showLogo: true }
+      },
+      {
+        path: AppRoutesStrings.contact,
+        component: ContactsComponent,
+        data: { showLogo: true }
+      },
+    ]
   },
 ];
 
