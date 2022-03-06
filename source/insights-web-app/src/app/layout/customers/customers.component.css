@@ -1,0 +1,22 @@
+.main-content {
+  padding-top: 8rem;
+}
+
+section {
+  position: inherit;
+}
+
+.content-bg {
+  padding: 3rem;
+  background-color: white;
+  border-radius: 2rem;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.ts-title {
+  margin-bottom: 2rem;
+  right: 50%;
+}
