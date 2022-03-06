@@ -1,3 +1,4 @@
+import { AppRoutesStrings } from './layout/utilities/app-constants';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -6,14 +7,6 @@ import { AboutUsComponent } from './layout/about-us/about-us.component';
 import { ServicesPageComponent } from './layout/services-page/services-page.component';
 import { CustomersComponent } from './layout/customers/customers.component';
 import { ContactsComponent } from './layout/contacts/contacts.component';
-
-const AppRoutesStrings = {
-  home: '',
-  about: 'about',
-  services: 'services',
-  customers: 'customers',
-  contact: 'contact',
-}
 
 const routes: Routes = [
   {

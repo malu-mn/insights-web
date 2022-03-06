@@ -5,8 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { HeaderComponent } from './layout/header/header.component';
-import { NavBarComponent } from './layout/header/nav-bar/nav-bar.component';
+import { NavBarComponent } from './layout/home-page/nav-bar/nav-bar.component';
 
 
 import { ServicesPageComponent } from './layout/services-page/services-page.component';
@@ -22,18 +21,17 @@ import { CanvasComponent } from './layout/home-page/canvas/canvas.component';
   declarations: [
     AppComponent,
     
-    HeaderComponent,
-    NavBarComponent,
     
     HomePageComponent,
+    NavBarComponent,
+    CanvasComponent,
+
     ServicesPageComponent,
     CustomersComponent,
     ContactsComponent,
     AboutUsComponent,
 
     FooterComponent,
-
-    CanvasComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,5 @@
+import { AppRoutesStrings } from './../utilities/app-constants';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private readonly _rourer: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  public navigate(): void {
+    this._rourer.navigate([AppRoutesStrings.about]);
   }
 
 }
