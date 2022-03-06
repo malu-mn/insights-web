@@ -23,3 +23,17 @@ a {
   border-color: #04b1c7;
   color: #fff;
 }
+
+.main-content {
+  padding-top: 8rem;
+}
+
+section {
+  position: inherit;
+}
+
+.content-bg {
+  padding: 3rem;
+  background-color: white;
+  border-radius: 2rem;
+}
