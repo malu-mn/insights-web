@@ -1,26 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top ts-separate-bg-element" [ngClass]="{'no-padding': showLogo}" data-bg-color="#1d1d1d">
-
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top ts-separate-bg-element" [ngClass]="{'no-padding': showLogo}"
+    data-bg-color="#1d1d1d">
     <div class="container">
         <a *ngIf="showLogo" class="navbar-brand" href="#page-top">
             <img src="assets/images/header_logo.png" alt="Insight Trading & Contracting WLL" width="219" height="129">
         </a>
-        <!--end navbar-brand-->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!--end navbar-toggler-->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link ts-scroll" routerLink="/" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+                <a *ngIf="showLogo" class="nav-item nav-link ts-scroll" routerLink="/" routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}">
+                    <i class=" fa fa-2x fa-home"></i>
+                </a>
                 <a class="nav-item nav-link ts-scroll" routerLink="/about" routerLinkActive="active">About</a>
                 <a class="nav-item nav-link ts-scroll" routerLink="/services" routerLinkActive="active">Services</a>
                 <a class="nav-item nav-link ts-scroll" routerLink="/customers" routerLinkActive="active">Customers</a>
                 <a class="nav-item nav-link ts-scroll" routerLink="/contact" routerLinkActive="active">Contact</a>
             </div>
-            <!--end navbar-nav-->
         </div>
-        <!--end collapse-->
     </div>
-    <!--end container-->
 </nav>
