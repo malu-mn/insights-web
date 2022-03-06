@@ -18,7 +18,7 @@ import { TweenLite } from 'gsap';
         opacity: 0,
       })),
       transition('show => hide', [
-        animate('2s')
+        animate('1.5s')
       ]),
       transition('hide => show', [
         animate('0.5s')

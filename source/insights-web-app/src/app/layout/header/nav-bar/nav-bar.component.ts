@@ -1,6 +1,5 @@
-import { IPageConfig } from './../../../models/page-config';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,7 +11,6 @@ export class NavBarComponent implements OnInit {
   public showLogo = false;
 
   constructor(
-    private readonly _activedRoute: ActivatedRoute,
     private readonly _router: Router
   ) { }
 
