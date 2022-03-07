@@ -1,0 +1,20 @@
+.side-column {
+  width: 15rem;
+  text-align: center;
+  height: 100vh;
+  display: table;
+}
+
+.left-column {
+  float: left;
+}
+
+.right-column {
+  float: right;
+}
+
+.next-prev {
+  color: white;
+  display: table-cell;
+  padding-top: 52vh;
+}

@@ -49,7 +49,7 @@ export class CanvasComponent implements OnInit {
     addListeners();
     
     this.logoState = 'show';
-    console.log('current state ' + this.logoState);
+    console.log('canvas logo current state ' + this.logoState);
 
     function initHeader() {
 
