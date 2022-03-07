@@ -4,14 +4,14 @@
 </div>
 <div class="left-column side-column">
     <div *ngIf="canMoveLeft" class="next-prev">
-        <span (click)="leftClick()">
+        <span (click)="leftClick()" (mouseover)="leftClick()">
             <i class="fas fa-3x fa-angle-double-left"></i>
         </span>
     </div>
 </div>
 <div class="right-column side-column">
     <div *ngIf="canMoveRight" class="next-prev">
-        <span (click)="rightClick()">
+        <span (click)="rightClick()" (mouseover)="rightClick()">
             <i class="fas fa-3x fa-angle-double-right"></i>
         </span>
     </div>
