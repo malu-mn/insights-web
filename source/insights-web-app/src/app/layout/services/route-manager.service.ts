@@ -42,12 +42,14 @@ export class RouteManagerService {
   private findRight(currentUrl: string): IRouteMapping {
     const index = this._urlMap.findIndex(x => x.url === currentUrl);
     if (index > -1 && index < (this._urlMap.length - 1)) { return this._urlMap[index + 1]; }
+    if (index == (this._urlMap.length - 1)) { return this._urlMap[0]; }
     return null;
   }
 
   private findLeft(currentUrl: string): IRouteMapping {
     const index = this._urlMap.findIndex(x => x.url === currentUrl);
-    if (index <= 0) { return null; }
+    if (index < 0) { return null; }
+    if (index == 0) { return this._urlMap[this._urlMap.length - 1]; }
     return this._urlMap[index - 1];
   }
 
@@ -59,14 +61,14 @@ export class RouteManagerService {
     ApplicationRouteOrder.forEach(routeName => {
 
       let fullRoute = `${AppRoutesStrings.main}/${routeName}`;
-      if (fullRoute.endsWith('/')) {
+      if (fullRoute.endsWith('/')) { // for /site
         fullRoute = fullRoute.substring(0, fullRoute.length - 1);
       }
 
       const mapItem: IRouteMapping = {
         routeName,
         url: `/${fullRoute}`,
-        fullRoute, 
+        fullRoute,
       };
 
       this._urlMap.push(mapItem);
