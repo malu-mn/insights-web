@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 @Component({
@@ -7,8 +8,9 @@ import { filter } from 'rxjs/operators';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent implements OnInit, OnDestroy {
 
+  private _subscription: Subscription;
   public showLogo = false;
 
   constructor(
@@ -18,11 +20,15 @@ export class NavBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._router.events
+    this._subscription = this._router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(navEnd => {
         this.updateLogoDisplay(navEnd['url']);
       });
+  }
+
+  ngOnDestroy(): void {
+    if (this._subscription) { this._subscription.unsubscribe(); }
   }
 
   private updateLogoDisplay(url: string): void {

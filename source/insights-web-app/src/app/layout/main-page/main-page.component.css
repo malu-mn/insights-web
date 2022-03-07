@@ -3,6 +3,7 @@
   text-align: center;
   height: 100vh;
   display: table;
+
 }
 
 .left-column {
@@ -16,5 +17,6 @@
 .next-prev {
   color: white;
   display: table-cell;
-  padding-top: 52vh;
+  padding-top: 50vh;
+  padding-bottom: 40vh;
 }

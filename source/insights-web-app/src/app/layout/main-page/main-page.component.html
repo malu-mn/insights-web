@@ -3,12 +3,16 @@
     <router-outlet></router-outlet>
 </div>
 <div class="left-column side-column">
-    <div class="next-prev">
-        <span> <i class="fas fa-3x fa-angle-double-left"></i> </span>
+    <div *ngIf="canMoveLeft" class="next-prev">
+        <span (click)="leftClick()">
+            <i class="fas fa-3x fa-angle-double-left"></i>
+        </span>
     </div>
 </div>
 <div class="right-column side-column">
-    <div class="next-prev">
-        <span> <i class="fas fa-3x fa-angle-double-right"></i> </span>
+    <div *ngIf="canMoveRight" class="next-prev">
+        <span (click)="rightClick()">
+            <i class="fas fa-3x fa-angle-double-right"></i>
+        </span>
     </div>
 </div>
