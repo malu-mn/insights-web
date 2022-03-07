@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,19 +13,22 @@ export class NavBarComponent implements OnInit {
 
   constructor(
     private readonly _router: Router
-  ) { }
-
-  ngOnInit(): void {
-    this._router.events.subscribe(change => {
-      
-      var currentUrl = change['url'];
-
-      // Don't show logo for home route ('')
-      if(currentUrl) {
-        this.showLogo = currentUrl !== '/';
-      }
-      
-    })
+  ) {
+    this.updateLogoDisplay(_router.url);
   }
 
+  ngOnInit(): void {
+    this._router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(navEnd => {
+        this.updateLogoDisplay(navEnd['url']);
+      });
+  }
+
+  private updateLogoDisplay(url: string): void {
+    // Don't show logo for home route ('')
+    if (url) {
+      this.showLogo = url !== '/';
+    }
+  }
 }
