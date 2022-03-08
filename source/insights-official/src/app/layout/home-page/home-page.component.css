@@ -1,0 +1,8 @@
+.down-arrow {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 7rem;
+    color: white;
+    z-index: 3;
+}

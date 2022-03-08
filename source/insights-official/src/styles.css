@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    color: #191919;
+    font-family: 'Ample Soft Pro', sans-serif;
+    font-weight: 400;
+    font-size: .9375rem;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(0, 19, 136);
+}
+
+he {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}

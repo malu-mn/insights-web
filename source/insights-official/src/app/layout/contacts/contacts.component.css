@@ -1,0 +1,35 @@
+.page-content {
+  margin-top: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 5rem;
+  background-color: white;
+}
+
+.form-control {
+  border: 0;
+  box-shadow: 0 0 0 0.125rem #04b1c7;
+  border-radius: 0.125rem;
+  padding: 0.5625rem 0.75rem;
+  color: cadetblue;
+}
+
+a {
+  color: #04b1c7;
+}
+
+.btn-primary {
+  background-color: #04b1c7;
+  border-color: #04b1c7;
+  color: #fff;
+}
+
+section {
+  position: inherit;
+}
+
+.content-bg {
+  padding: 3rem;
+  background-color: white;
+  border-radius: 2rem;
+}
