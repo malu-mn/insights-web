@@ -16,6 +16,7 @@ import { AboutUsComponent } from './layout/about-us/about-us.component';
 import { HomePageComponent } from './layout/home-page/home-page.component';
 import { CanvasComponent } from './layout/home-page/canvas/canvas.component';
 import { MainPageComponent } from './layout/main-page/main-page.component';
+import { MainCanvasComponent } from './layout/main-page/main-canvas/main-canvas.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,8 @@ import { MainPageComponent } from './layout/main-page/main-page.component';
     AboutUsComponent,
 
     MainPageComponent,
+
+    MainCanvasComponent,
   ],
   imports: [
     BrowserModule,
