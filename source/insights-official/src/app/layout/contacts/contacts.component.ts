@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IEmailModel } from './../../models/email-model';
+import { EmailService } from './../../services/email/email.service';
 
 @Component({
   selector: 'app-contacts',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly _emailService: EmailService) { }
 
   ngOnInit(): void {
+  }
+
+  public sendEmail(obj: IEmailModel): void {
+    this._emailService.send(obj)
   }
 
 }
