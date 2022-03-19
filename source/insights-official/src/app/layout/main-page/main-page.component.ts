@@ -3,7 +3,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
-import { RouteManagerService } from './../services/route-manager.service';
+import { RouteManagerService } from '../../services/route-manager.service';
 
 @Component({
   selector: 'app-main-page',

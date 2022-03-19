@@ -5,9 +5,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+
+
+import { MainPageComponent } from './layout/main-page/main-page.component';
 import { NavBarComponent } from './layout/nav-bar/nav-bar.component';
-
-
 import { ServicesPageComponent } from './layout/services-page/services-page.component';
 import { CustomersComponent } from './layout/customers/customers.component';
 import { ContactsComponent } from './layout/contacts/contacts.component';
@@ -15,33 +16,33 @@ import { AboutUsComponent } from './layout/about-us/about-us.component';
 
 import { HomePageComponent } from './layout/home-page/home-page.component';
 import { CanvasComponent } from './layout/home-page/canvas/canvas.component';
-import { MainPageComponent } from './layout/main-page/main-page.component';
-import { MainCanvasComponent } from './layout/main-page/main-canvas/main-canvas.component';
+
+
+
+import { RouteManagerService } from './services/route-manager.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     
-    
     HomePageComponent,
     NavBarComponent,
-    CanvasComponent,
-
     ServicesPageComponent,
     CustomersComponent,
     ContactsComponent,
     AboutUsComponent,
 
     MainPageComponent,
-
-    MainCanvasComponent,
+    CanvasComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    RouteManagerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
