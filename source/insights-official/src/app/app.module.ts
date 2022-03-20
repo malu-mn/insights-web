@@ -12,6 +12,7 @@ import { ServicesPageComponent } from './layout/main-page/services-page/services
 import { CustomersComponent } from './layout/main-page/customers/customers.component';
 import { ContactsComponent } from './layout/main-page/contacts/contacts.component';
 import { AboutUsComponent } from './layout/main-page/about-us/about-us.component';
+import { OurValuesComponent } from './layout/main-page/our-values/our-values.component';
 
 import { HomePageComponent } from './layout/home-page/home-page.component';
 import { CanvasComponent } from './layout/home-page/canvas/canvas.component';
@@ -29,6 +30,7 @@ import { EmailService } from './services/email/email.service';
     CustomersComponent,
     ContactsComponent,
     AboutUsComponent,
+    OurValuesComponent,
 
     MainPageComponent,
     CanvasComponent,
