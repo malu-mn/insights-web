@@ -52,12 +52,39 @@
                         </div>
                     </div>
                     <div class="form-group clearfix">
-                        <button type="submit" class="btn btn-primary float-right" id="form-contact-submit">
-                            <span>
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                            </span>
-                            <span> Send a Message</span>
-                        </button>
+                        <ng-container [ngSwitch]="emailStatus">
+                            <ng-container *ngSwitchCase="'NotStarted'">
+                                <button type="submit" class="btn btn-primary float-right" id="form-contact-submit"
+                                    [disabled]="!contactUs.valid">
+                                    <span>
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    </span>
+                                    <span> Send a Message</span>
+                                </button>
+                            </ng-container>
+                            <ng-container *ngSwitchCase="'InProgress'">
+                                <div class="btn btn-info float-right">
+                                    <span>
+                                        <i class="fas fa-spinner fa-pulse"></i>
+                                    </span>
+                                    <span> Sending your message to our sales team.</span>
+                                </div>
+                            </ng-container>
+                            <ng-container *ngSwitchCase="'CompletedSuccessfully'">
+                                <div class="btn btn-success float-right">
+                                    <span><i class="fa fa-check" aria-hidden="true"></i></span>
+                                    <span> We will contact you soon.</span>
+                                </div>
+                            </ng-container>
+                            <ng-container *ngSwitchCase="'Failed'">
+                                <div class="btn btn-warning float-right">
+                                    <span>
+                                        <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                                    </span>
+                                    <span> Please call us on the phone number provided.</span>
+                                </div>
+                            </ng-container>
+                        </ng-container>
                     </div>
                     <div class="form-contact-status"></div>
                 </form>

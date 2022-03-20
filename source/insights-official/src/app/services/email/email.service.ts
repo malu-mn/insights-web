@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ContactsComponent } from 'src/app/layout/contacts/contacts.component.js';
 import { IEmailModel } from 'src/app/models/email-model';
 import './../../../assets/email/smtp.js';
 declare let Email: any;
@@ -15,8 +16,9 @@ export class EmailService {
 
   constructor() { }
 
-  public send(obj: IEmailModel) {
-    debugger;
+  public send(obj: IEmailModel,
+    callBack: (message: string, parent: ContactsComponent) => void,
+    parent: ContactsComponent) {
 
     Email.send({
       Host: this._host,
@@ -27,8 +29,7 @@ export class EmailService {
       Subject: `Contact: ${obj.name} <${obj.email}>`,
       Body: obj.message
     }).then(message => {
-      console.log('Email sent to sales@insight.com.qa');
-      alert(message);
+      callBack(message, parent);
     });
 
   }
