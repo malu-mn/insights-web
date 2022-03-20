@@ -1,6 +1,8 @@
+
+
 import { Injectable } from '@angular/core';
-import { ContactsComponent } from 'src/app/layout/contacts/contacts.component.js';
-import { IEmailModel } from 'src/app/models/email-model';
+import { IEmailModel } from '../../models/email-model';
+import { ContactsComponent } from '../../layout/main-page/contacts/contacts.component';
 import './../../../assets/email/smtp.js';
 declare let Email: any;
 

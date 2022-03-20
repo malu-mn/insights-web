@@ -1,6 +1,5 @@
-import { AppRoutesStrings } from '../layout/utilities/app-constants';
 import { Injectable } from '@angular/core';
-import { ApplicationRouteOrder } from '../layout/utilities/app-constants';
+import { AppRoutesStrings, ApplicationRouteOrder } from './../utilities/app-constants';
 
 interface IRouteMapping {
   routeName: string;

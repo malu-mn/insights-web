@@ -6,10 +6,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomePageComponent } from './layout/home-page/home-page.component';
 import { MainPageComponent } from './layout/main-page/main-page.component';
 
-import { AboutUsComponent } from './layout/about-us/about-us.component';
-import { CustomersComponent } from './layout/customers/customers.component';
-import { ContactsComponent } from './layout/contacts/contacts.component';
-import { ServicesPageComponent } from './layout/services-page/services-page.component';
+import { AboutUsComponent } from './layout/main-page/about-us/about-us.component';
+import { CustomersComponent } from './layout/main-page/customers/customers.component';
+import { ContactsComponent } from './layout/main-page/contacts/contacts.component';
+import { ServicesPageComponent } from './layout/main-page/services-page/services-page.component';
 
 const routes: Routes = [
   {

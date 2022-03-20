@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IEmailModel, EmailStatus } from './../../models/email-model';
-import { EmailService } from './../../services/email/email.service';
+import { IEmailModel, EmailStatus } from './../../../models/email-model';
+import { EmailService } from './../../../services/email/email.service';
 
 @Component({
   selector: 'app-contacts',

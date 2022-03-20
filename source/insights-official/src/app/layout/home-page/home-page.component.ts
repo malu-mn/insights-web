@@ -1,4 +1,4 @@
-import { AppRoutesStrings } from './../utilities/app-constants';
+import { AppRoutesStrings } from '../../utilities/app-constants';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
