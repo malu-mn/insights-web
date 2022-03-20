@@ -21,9 +21,7 @@
                         <span>+974 5557 0788</span>
                     </figure>
                 </address>
-                <!--end address-->
             </div>
-            <!--end col-md-4-->
             <div class="col-md-8">
                 <h3>Contact Form</h3>
                 <form id="form-contact" #contactUs="ngForm" (ngSubmit)="sendEmail(contactUs.value)"
@@ -35,20 +33,15 @@
                                 <input type="text" class="form-control" id="form-contact-name" name="name"
                                     placeholder="Your Name" required ngModel>
                             </div>
-                            <!--end form-group -->
                         </div>
-                        <!--end col-md-6 col-sm-6 -->
                         <div class="col-md-6 col-sm-6">
                             <div class="form-group">
                                 <label for="form-contact-email">Your Email *</label>
                                 <input type="email" class="form-control" id="form-contact-email" name="email"
                                     placeholder="Your Email" required ngModel>
                             </div>
-                            <!--end form-group -->
                         </div>
-                        <!--end col-md-6 col-sm-6 -->
                     </div>
-                    <!--end row -->
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
@@ -56,11 +49,8 @@
                                 <textarea class="form-control" id="form-contact-message" rows="3" name="message"
                                     placeholder="Your Message" required ngModel></textarea>
                             </div>
-                            <!--end form-group -->
                         </div>
-                        <!--end col-md-12 -->
                     </div>
-                    <!--end row -->
                     <div class="form-group clearfix">
                         <button type="submit" class="btn btn-primary float-right" id="form-contact-submit">
                             <span>
@@ -69,12 +59,9 @@
                             <span> Send a Message</span>
                         </button>
                     </div>
-                    <!--end form-group -->
                     <div class="form-contact-status"></div>
                 </form>
-                <!--end form-contact -->
             </div>
         </div>
-        <!--end row-->
     </div>
 </section>
