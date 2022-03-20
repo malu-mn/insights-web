@@ -5,3 +5,7 @@ section {
 .align-center {
     text-align: center;
 }
+
+.center{
+  text-align:justify;
+}
