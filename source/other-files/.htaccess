@@ -1,0 +1,9 @@
+ErrorDocument 404 /index.html
+Options +SymLinksIfOwnerMatch 
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+RewriteCond %{HTTPS} !on [OR]
+RewriteCond %{HTTP_HOST} !^www\.
+RewriteRule (.*) https://www.insight.com.qa%{REQUEST_URI} [L,R=301]
