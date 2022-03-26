@@ -10,22 +10,22 @@
 #sidebar1 {
   min-height: 400px;
   float: left;
-  width: 200px;
+  width: 10vw;
   height: 100vh;
 }
 
 #sidebar2 {
   min-height: 400px;
   float: right;
-  width: 200px;
+  width: 10vw;
 
   height: 100vh;
 }
 
 #column1 {
   min-height: 400px;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 10vw;
+  margin-right: 10vw;
 }
 
 #route-container {
@@ -34,7 +34,7 @@
   margin-bottom: 0;
   margin-right: 50px;
   margin-left: 50px;
-  border-radius: 25PX;
+  overflow: auto;
 }
 
 header {
