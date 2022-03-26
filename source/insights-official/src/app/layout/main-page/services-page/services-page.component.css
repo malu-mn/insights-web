@@ -6,6 +6,6 @@ section {
   text-align: center;
 }
 
-.justify {
-  text-align: justify;
+.points {
+  margin-bottom: 0;
 }
