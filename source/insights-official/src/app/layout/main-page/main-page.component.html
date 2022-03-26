@@ -6,14 +6,14 @@
     <div id="main-content">
         <div id="sidebar1">
             <div *ngIf="canMoveLeft" class="next-prev">
-                <span (click)="leftClick()" (mouseover)="leftClick()">
+                <span (click)="leftClick()">
                     <i class="fas fa-3x fa-angle-double-left"></i>
                 </span>
             </div>
         </div>
         <div id="sidebar2">
             <div *ngIf="canMoveRight" class="next-prev">
-                <span (click)="rightClick()" (mouseover)="rightClick()">
+                <span (click)="rightClick()">
                     <i class="fas fa-3x fa-angle-double-right"></i>
                 </span>
             </div>
