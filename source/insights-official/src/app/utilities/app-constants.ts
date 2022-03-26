@@ -2,7 +2,7 @@
 export const AppRoutesStrings = {
     home: '',
 
-    main: 'site',
+    main: 'insight',
     // sub-routes of main
     about: '', // default of main route
     services: 'services',
